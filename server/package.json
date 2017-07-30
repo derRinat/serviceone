@@ -1,0 +1,24 @@
+{
+  "name": "code_challenge_server",
+  "version": "1.0.0",
+  "description": "Service Partner One Server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node index.js",
+    "prod": "NODE_ENV=production node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.11.4",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0"
+  }
+}
