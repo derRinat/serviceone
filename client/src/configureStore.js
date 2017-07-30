@@ -3,10 +3,12 @@ import { routerMiddleware, syncHistoryWithStore } from 'react-router-redux';
 import thunk from 'redux-thunk';
 
 import rootReducer from './reducers';
+import apiMiddleware from './middleware/api';
 
 const configureStore = (history, initialState = {}) => {
     const middlewares = [
         thunk,
+        apiMiddleware,
         routerMiddleware(history)
     ];
 

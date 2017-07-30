@@ -1,6 +1,6 @@
 import * as AuthActions from "../constants/actions/authActionTypes";
 import Storage from "../utils/storage";
-import { AUTH_KEY } from "../config";
+import { AUTH_KEY } from "../config/common";
 
 const auth = (state = { authenticated: !!Storage.get(AUTH_KEY) }, action) => {
 

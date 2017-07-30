@@ -1,2 +1,2 @@
-
-export const AUTH_KEY = 'partner_auth_key';
+export api from "./api";
+export common from "./common";

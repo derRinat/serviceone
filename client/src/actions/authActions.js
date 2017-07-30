@@ -1,19 +1,20 @@
 import { push } from 'react-router-redux';
-import * as AuthAction from '../constants/actions/authActionTypes';
+import * as AuthActions from '../constants/actions/authActionTypes';
+import * as API from "../api/auth";
 
-export const login = data => dispatch => {
+export const login = data => async dispatch => {
 
-    dispatch({
-        type: AuthAction.LOGIN_SUCCESS
-    })
+    const action = await dispatch(API.login(data));
 
-    dispatch(push('/'));
+    if(AuthActions.LOGIN_SUCCESS === action.type) {
+        dispatch(push('/'));
+    }
 };
 
-export const logout = data => dispatch => {
-    
+export const logout = () => dispatch => {
+
     dispatch({
-        type: AuthAction.LOGOUT
+        type: AuthActions.LOGOUT
     })
 
     dispatch(push('/auth'));

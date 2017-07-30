@@ -1,6 +1,5 @@
 import * as PartnerActions from "../constants/actions/partnerActionTypes";
-
-
+ 
 const partner = (state = {}, action) => {
 
     switch(action.type) {
