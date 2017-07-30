@@ -1,7 +1,8 @@
 import * as AuthActions from "../constants/actions/authActionTypes";
+import Storage from "../utils/storage";
+import { AUTH_KEY } from "../config";
 
-
-const auth = (state = { authenticated: false }, action) => {
+const auth = (state = { authenticated: !!Storage.get(AUTH_KEY) }, action) => {
 
     switch(action.type) {
 
@@ -16,11 +17,13 @@ const auth = (state = { authenticated: false }, action) => {
             };
 
         case AuthActions.LOGIN_SUCCESS:
+            Storage.set(AUTH_KEY, "success");
             return {
                 authenticated: true
             };
 
         case AuthActions.LOGOUT:
+            Storage.remove(AUTH_KEY);
             return {
                 authenticated: false
             };
