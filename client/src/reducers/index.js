@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 import { routerReducer as routing } from 'react-router-redux';
 
-const dummy = (state={}, action) => state;
+import auth from './auth';
+import partner from './partner';
 
 const rootReducer = combineReducers({
     routing,
-    dummy
+    auth,
+    partner
 });
 
 export default rootReducer;
