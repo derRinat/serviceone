@@ -5,7 +5,7 @@ const Login = {
     LOGIN_PASSWORD: 'Password',
     LOGIN_PASSWORD_HELP: 'Your password',
     LOGIN_BUTTON: 'Lets start',
-    LOGIN_LINK: 'I have already account. Sign in.'
+    LOGIN_LINK: 'I have already account. Sign in.' 
 };
 
 export default Login;

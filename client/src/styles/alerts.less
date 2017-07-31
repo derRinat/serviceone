@@ -1,0 +1,47 @@
+@import "variables.less";
+
+.alerts {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: auto;
+    width: 300px;
+    z-index: 99;
+
+    .alert {
+        position: relative;
+        border-radius: 5px;
+        background-color: @default-background-color;
+        padding: 15px;
+        margin: 15px 10px;
+        animation: fadeIn .3s;
+
+        h5 {
+            font-weight: bold;
+            margin-bottom: 7px;
+            line-height: 21px;
+            display: flex;
+        }
+
+        .close {
+            position: absolute;
+            cursor: pointer;
+            top: 10px;
+            right: 10px;
+            color: #e1571a;
+        }
+
+        .icon {
+            font-size: 26px;
+            margin-right: 10px;
+        }
+
+        &.success .icon {
+            color: #4fba73;
+        }
+
+        &.error .icon {
+            color: #e27471;
+        }
+    }
+}
