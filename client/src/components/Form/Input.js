@@ -51,7 +51,7 @@ class Input extends Component {
     }
 
     render() {
-        const { name, placeholder, value, type, length, help, label, errorMsg } = this.props;
+        const { name, placeholder, value, type, length, help, errorMsg } = this.props;
         const { error } = this.state;
 
         const params = {
@@ -70,10 +70,6 @@ class Input extends Component {
                     onFocus={ this._onFocus.bind(this) }
                     onBlur={ this._onBlur.bind(this) }
                 />
-
-                { label &&
-                <em>{ label }</em>
-                }
 
                 { help &&
                 <div className="help">{ help }</div>
@@ -99,7 +95,6 @@ Input.propTypes = {
     help: PropTypes.string,
     className: PropTypes.string,
     onChange: PropTypes.func,
-    label: PropTypes.string,
     errorMsg: PropTypes.string,
 };
 

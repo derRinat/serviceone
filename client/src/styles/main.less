@@ -1,0 +1,58 @@
+@import "variables.less";
+
+body {
+    background-color: @default-background-color;
+    color: @default-color;
+    font: @default-font;
+}
+
+h2 {
+    margin-bottom: 50px;
+    color: #453f3f;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: none;
+    text-align: center;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.table-bordered td {
+    border-bottom: 1px solid #ebebeb; 
+}
+.table td {
+    padding: 20px;
+
+    a {
+        display: block;
+    }
+}
+
+/** Login **/
+
+.auth {
+    background-color: @bg-green;
+
+    a {
+        color: @bg-green;
+    }
+}
+
+/** Sign up **/
+.signup {
+    background-color: @bg-blue;
+
+    a {
+        color: @bg-blue;
+    }
+}

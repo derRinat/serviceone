@@ -17,7 +17,8 @@ const auth = (state = { authenticated: !!Storage.get(AUTH_KEY) }, action) => {
             };
 
         case AuthActions.LOGIN_SUCCESS:
-            Storage.set(AUTH_KEY, "success");
+            const { token } = action.data;
+            Storage.set(AUTH_KEY, token);
             return {
                 authenticated: true
             };

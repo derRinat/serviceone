@@ -6,18 +6,18 @@ import PageHeader from '../components/Common/PageHeader';
 import LoginForm from '../components/Auth/LoginForm';
 
 import { login } from '../actions/authActions';
+import Locale from '../utils/locale';
 
 class Login extends Component {
 
     onSubmit(email, password) {
-        const { login } = this.props; 
+        const { login } = this.props;
         login({email, password})
     }
 
     render() {
         return(
-            <section>
-                <PageHeader title="Login form" />
+            <section className="page login">
                 <LoginForm
                     onSubmit={ this.onSubmit.bind(this) }
                 />

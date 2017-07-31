@@ -26,8 +26,8 @@ module.exports = {
                 include: __dirname
             },
             {
-                test: /\.css/,
-                loader: "style-loader!css-loader"
+                test: /\.less$/,
+                loader: "style-loader!css-loader!less-loader"
             },
             {   test: /\.(jpe?g|png|gif|svg|eot|ttf|woff)/,
                 loader: "file-loader"

@@ -7,7 +7,7 @@ class Auth extends Component {
     componentWillMount() {
         const { authenticated, replace } = this.props;
         authenticated && replace('/');
-    } 
+    }
 
     render() {
         const { children } = this.props;
@@ -20,8 +20,9 @@ class Auth extends Component {
     }
 }
 
-const mapStateToProps = ({ auth }) => ({
-    authenticated: auth.authenticated
+const mapStateToProps = ({ auth, routing }) => ({
+    authenticated: auth.authenticated,
+    routing
 });
 
 export default connect(mapStateToProps, {

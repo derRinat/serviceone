@@ -4,9 +4,13 @@ import { createBrowserHistory } from 'history'
 
 import Root from './components/Root';
 import configureStore from './configureStore';
+import Locale from './utils/locale';
 
 /** load styles **/
 import './styles';
+
+/** Init i18n **/
+Locale.init('en');
 
 /** Create store **/
 const history = createBrowserHistory();

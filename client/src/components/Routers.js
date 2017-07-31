@@ -5,6 +5,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import Auth from './Layout/Auth';
 import Main from './Layout/Main';
 
+import SignUp from '../containers/SignUp';
 import Login from '../containers/Login';
 import Dashboard from '../containers/Dashboard';
 
@@ -17,6 +18,7 @@ const Routers = ({ history }) => (
                 <Auth>
                     <Switch>
                         <Route exact path="/auth" component={ Login }/>
+                        <Route path="/auth/signup" component={ SignUp }/>
                     </Switch>
                 </Auth>
             </Route>

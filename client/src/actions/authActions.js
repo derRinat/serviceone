@@ -11,6 +11,14 @@ export const login = data => async dispatch => {
     }
 };
 
+export const signup = data => async dispatch => {
+    const action  = await dispatch(API.signup(data));
+
+    if(AuthActions.SIGNUP_SUCCESS == action.type) {
+        dispatch(push('/'));
+    }
+}
+
 export const logout = () => dispatch => {
 
     dispatch({

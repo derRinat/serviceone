@@ -13,7 +13,8 @@ const PartnerScheme = new mongoose.Schema(
         city: String
     },
     {
-        versionKey: false
+        versionKey: false,
+        timestamps: true
     }
 );
 

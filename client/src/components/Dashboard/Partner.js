@@ -1,11 +1,23 @@
 import React from 'react';
+import Locale from '../../utils/locale';
 
-const Partner = ({ data: {name, login, city }}) => (
-    <ul>
-        <li>Name: { name }</li>
-        <li>Login: { login }</li>
-        <li>City { city }</li>
-    </ul>
+const Partner = ({ data: {name, city, email }}) => (
+    <table className="table table-bordered">
+        <tbody>
+            <tr>
+                <td>{ Locale.trans('DASHBOARD_NAME') }</td>
+                <td>{ name }</td>
+            </tr>
+            <tr>
+                <td>{ Locale.trans('DASHBOARD_EMAIL') }</td>
+                <td>{ email }</td>
+            </tr>
+            <tr>
+                <td>{ Locale.trans('DASHBOARD_CITY') }</td>
+                <td>{ city }</td>
+            </tr>
+        </tbody>
+    </table>
 );
 
 export default Partner;

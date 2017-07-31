@@ -7,6 +7,8 @@ import Partner from '../components/Dashboard/Partner';
 import Button from '../components/Form/Button';
 import { logout } from '../actions/authActions';
 
+import Locale from '../utils/locale';
+
 class Dashboard extends Component {
 
     onLogout() {
@@ -17,16 +19,20 @@ class Dashboard extends Component {
     render() {
 
         const { partner } = this.props;
+        const { name } = partner;
 
         return (
-            <div>
-                <PageHeader title="Partner dashboard"/>
-                <Partner data = { partner }/>
-                <Button
-                    title = "Logout"
-                    onClick = { this.onLogout.bind(this) }
-                />
-            </div>
+            <section className="page">
+                <div className="personal">
+                    <PageHeader title={ Locale.trans('DASHBOARD_WELCOME', {username: name })}/>
+                    <Partner data = { partner }/>
+                    <Button
+                        title = "Logout"
+                        color="red"
+                        onClick = { this.onLogout.bind(this) }
+                    />
+                </div>
+            </section>
         );
     }
 }
